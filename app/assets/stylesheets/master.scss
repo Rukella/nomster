@@ -17,3 +17,13 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
 }
+
+body {
+  background: url('/assets/concrete_wall_2.png');
+    font-family: Cambria, "Hoefler Text", Utopia, "Liberation Serif", "Nimbus Roman No9 L Regular", Times, "Times New Roman", serif;
+}
+
+.navbar {
+  background: image_url('concrete_wall.png');
+   box-shadow: 10px 10px 5px #aaaaaa;
+}
