@@ -20,14 +20,15 @@ def index
 
  def show
   @place = Place.find(params[:id])
+  @comment = Comment.new
  end
 
-def edit
+ def edit
   @place = Place.find(params[:id])
 
    if @place.user != current_user
         return render plain: 'Not Allowed', status: :forbidden
-    end
+  end
 end
 
 def update
