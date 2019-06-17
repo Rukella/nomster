@@ -34,3 +34,21 @@ body {
   font-size: 26px;
 
 }
+
+.digg_pagination {
+  background: white;
+  cursor: default;
+  display: inline-block;
+  /* self-clearing method: */ 
+  }
+
+    a, span, em {
+  padding: 0.2em 0.5em;
+  display: block;
+float: left;
+  margin-right: 1px;
+  }
+
+.center {
+  text-align: center;
+}
