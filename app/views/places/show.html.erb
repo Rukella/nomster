@@ -86,3 +86,20 @@
   <% @place.comments.each do |comment| %>
 <% end %>
 </div>
+
+<div class="clear"></div>
+
+<%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
+<%= f.input :caption %>
+  <%= f.submit "Upload image", class: 'btn btn-primary' %>
+<% end %>
+
+<div class="booyah-box col-10 offset-1">
+  <h1>Photos</h1>
+
+<% @place.photos.each do |photo| %>
+<div>
+  <b><%= photo.caption %></b>
+  <small><%= photo.user.email %></small>
+</div>
+<% end %>
