@@ -76,3 +76,4 @@ gem 'jquery-rails'
 gem 'will_paginate', '~> 3.1', '>= 3.1.6'
 gem "geocoder"
 gem "figaro"
+gem 'carrierwave', '~> 1.0'
