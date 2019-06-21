@@ -1,0 +1,10 @@
+<div class="booyah-box col-6 offset-1">
+ <h1>Enter details of Photo</h1>
+  <%= simple_form_for @photo do |f| %>
+  <%= f.input :picture %>
+  <%= f.input :caption %>
+  <br /
+  <%= f.submit 'Add photo', class: 'btn btn-primary' %>
+  <% end %>
+</div>
+</div>

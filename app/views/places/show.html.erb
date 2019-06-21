@@ -106,18 +106,20 @@
 <div class="booyah-box col-6 offset-1">
   <%= simple_form_for @photo, url: place_photos_path(@place) do |f| %>
   <%= f.input :caption %>
+  <%= f.input :picture %>
   <%= f.submit "Add Photo", class: 'btn btn-primary' %>
  <% end %>
 </div>
 
-<div class="row">
-  <% @place.photos.each do |photo| %>
+
 <div class="booyah-box col-6 offset-1">
-    <%= photo.caption %>
-  </div>
+  <% @place.photos.each do |photo| %>
+  <%= image_tag photo.picture.url %>
+  <%= photo.caption %>
+ <% end %>
 </div>
 
-<% end %>
+
 
 
 

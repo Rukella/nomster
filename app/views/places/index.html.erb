@@ -15,16 +15,12 @@
         <small><%= place.comments.last.user.email %></small>
       </blockquote>
     </div>
-   </div>
-  <% end %>
+  </div>
+ <% end %>
  <% end %>
 <% end %>
- 
 
 
-
-    <div class="digg_pagination">
-     <%= will_paginate @places, :container => true %>
-    </div>
-
-
+<div class="digg_pagination">
+  <%= will_paginate @places, :container => true %>
+</div>
