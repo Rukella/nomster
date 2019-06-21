@@ -3,12 +3,10 @@
   <h1><%= link_to place.name, place_path(place) %></h1><br />
     <i><%= place.address %></i><br /><br />
     <p><%= place.description %></p><br />
-    <% if place.user.present? %>
 
     <% if place.user.present? %>
      <small><%= place.user.email %></small>
     <% end %>
-  </div>
 
   
   <% if place.comments.present? %>
@@ -20,10 +18,9 @@
         <%= place.comments.last.message %><br />
         <small><%= place.comments.last.user.email %></small>
       </blockquote>
-    </div>
   </div>
- <% end %>
- <% end %>
+<% end %>
+</div>
 <% end %>
 
 
@@ -31,3 +28,5 @@
 <div class="digg_pagination">
   <%= will_paginate @places, :container => true %>
 </div>
+
+
