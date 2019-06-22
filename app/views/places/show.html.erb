@@ -45,6 +45,7 @@
 <div class="clear"></div>
 
 <br />
+<br />
 
   <div class="modal fade" id="mymodal" tabindex="-2" role="dialog" aria-labelledby="modal2" aria-hidden="true">
   <div class="modal-dialog" role="document">
@@ -70,26 +71,25 @@
   </div>
 
 
-<div class="col-12 offset-1">
+<div class="col-10 offset-1">
   <!-- Button trigger modal -->
   <button type="button" class="btn btn-primary btn-lg float-right" data-toggle="modal" data-target="#mymodal">
   Add photo
  </button>
 </div>
 <br />
-<br />
 
-<div class="col-12 offset-1">
-<div class="booyah-box col-6 offset-1">
+
+<div class="clear"></div>
+
+  <div class="booyah-box col-6 offset-1">
   <% @place.photos.each do |photo| %>
   <%= image_tag photo.picture.url %><br />
   <%= photo.caption %>
  <% end %>
 </div>
-</div>
 
 
-<br />
 <br />
 
 
