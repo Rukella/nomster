@@ -5,8 +5,16 @@
     <p><%= place.description %></p><br />
 
     <% if place.user.present? %>
-     <small><%= place.user.email %></small>
+     <small><%= place.user.email %></small><br /><br />
     <% end %>
+
+
+ <div class="booyah-box col-10 offset-1">
+  <% if place.photos.present? %>
+     <%= image_tag place.photos.last.picture.url %>
+   </div>
+   <% end %>
+     
 
  <% if place.comments.present? %>
     <div class="col-12">
@@ -23,11 +31,7 @@
 <% end %>
 
 
-
-
-
 <div class="digg_pagination">
   <%= will_paginate @places, :container => true %>
 </div>
-
 
