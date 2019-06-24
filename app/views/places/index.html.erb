@@ -38,7 +38,7 @@
     <% end %>
 
 
-<div class="col-sm-12">
+<div class="col-sm-6">
   <% if place.photos.present? %>
      <%= image_tag place.photos.last.picture.url %>
   <% end %>
@@ -47,7 +47,7 @@
 
 
  <% if place.comments.present? %>
-    <div class="col-12">
+    <div class="col-6">
       <blockquote>
         <% if place.comments.last.humanized_rating.present? %>
           <b><%= place.comments.last.humanized_rating %></b> -

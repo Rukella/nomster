@@ -105,11 +105,19 @@ blockquote p {
 
 
 img {width: 100%;
+    display: block;
+
+}
+
+.navbar-inverse .navbar-nav .nav-link{
+ color: #DA3B20;
 }
 
 a {
-  color: #AF2226;
-}
+    color: #AF2226;
+    text-decoration: none;
+    }
+
 
 .carousel-inner > .carousel-item > img, .carousel-inner > .carousel-item > a > img {
   display : block;
