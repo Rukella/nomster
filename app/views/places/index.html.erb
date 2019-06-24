@@ -8,12 +8,14 @@
      <small><%= place.user.email %></small><br /><br />
     <% end %>
 
-<div class="col-12">
+
+<div class="col-sm-12">
   <% if place.photos.present? %>
      <%= image_tag place.photos.last.picture.url %>
-   </div>
-   <% end %>
-     
+  <% end %>
+</div>
+
+
 
  <% if place.comments.present? %>
     <div class="col-12">
@@ -24,10 +26,12 @@
         <%= place.comments.last.message %><br />
         <small><%= place.comments.last.user.email %></small>
       </blockquote>
+    </div>
   </div>
 <% end %>
 </div>
 <% end %>
+
 
 
 <div class="digg_pagination">
