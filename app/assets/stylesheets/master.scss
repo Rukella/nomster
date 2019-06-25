@@ -17,13 +17,13 @@
 h1, h2, h3, h4, h5, h6 {
   margin: 0;
   padding: 0;
+ 
+}
+
+h3 {
   color: #DA3B20;
-
 }
 
-h4 {
-  colour: #111A21;
-}
 
 body {
   background: image_url('brillant.png');
@@ -41,7 +41,8 @@ body {
 .navbar-inverse .navbar-brand {
   color: #DA3B20;
   font-family: 'nobileregular', sans-serif;
-  font-size: 26px;
+  font-size: 28px;
+  text-decoration: none;
 
 }
 
@@ -55,7 +56,7 @@ body {
   a, span, em {
   padding: 0.2em 0.5em;
   display: block;
-float: left;
+  float: left;
   margin-right: 1px;
   }
 
@@ -121,7 +122,6 @@ img {width: 100%;
 
 
 a {
-  color: #AF2226;
   text-decoration: underline;
  }
 
@@ -160,4 +160,8 @@ p {
 
 small {
   padding: 20px
+}
+
+.nav-link {
+  text-decoration: none;
 }
