@@ -21,6 +21,7 @@
   <div class="row">
 <% @user.comments.each do |comment| %>
   <div class="col-12 col-sm-6">
+    <% unless comment.place.nil? %>
     <h2><%= link_to comment.place.name, place_path(comment.place) %></h2>
      <blockquote>
       <% if comment.humanized_rating.present? %>
@@ -29,6 +30,7 @@
       <%= comment.message %>
       <small><%= comment.user.email %></small>
      </blockquote>
+     <% end %>
   </div>
 <% end %>
 </div> 
