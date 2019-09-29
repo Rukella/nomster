@@ -165,3 +165,21 @@ small {
 .nav-link {
   text-decoration: none;
 }
+
+
+.icon-b {
+  padding: 10px;
+  color: black;
+  min-width: 50px;
+  text-align: center;
+}
+
+
+
+
+.form-group{
+  display: -ms-flexbox; /* IE10 */
+  display: flex;
+  width: 100%;
+  margin-bottom: 15px;
+}
