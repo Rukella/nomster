@@ -6,15 +6,15 @@
   </ol>
   <div class="carousel-inner" role="listbox">
     <div class="carousel-item active">
-      <%= image_tag 'slider1.jpg', class:  'img-fluid' %>
+      <%= image_tag 'diner1.jpg', class:  'img-fluid' %>
       <div class="carousel-caption d-none d-md-block">
-        <h3>Find your perfect destination</h3>
+        <h3>Just Restaurants</h3>
       </div>
     </div>
     <div class="carousel-item">
-       <%= image_tag 'Slider2.jpg', class: 'img-fluid' %>
+       <%= image_tag 'diner.jpg', class: 'img-fluid' %>
     <div class="carousel-caption d-none d-md-block">
-      <h3>Looking for a place to go?</h3>
+      <h3>Looking for a place to eat?</h3>
     </div>
     </div>
   <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
@@ -27,41 +27,43 @@
   </a>
 </div>
 
+<div class="container">
+<div class="row">
  <% @places.each do |place| %>
-
-  <div class="booyah-box col-10 offset-1">
-    <h1><%= link_to place.name, place_path(place) %></h1><br />
-    <i><%= place.address %></i><br /><br />
-    <p><%= place.description %></p><br />
-
-
-
-
-  <div class="col-sm-6">
-  <% if place.photos.present? %>
+    <div class="col-md-3">
+    <div class="card">
+        <div class="card-header preview">
+    <% if place.photos.present? %>
      <%= image_tag place.photos.last.picture.url %>
   <% end %>
   </div>
-
-
- <% if place.comments.present? %>
+    <div class="card-body">
+   <%= link_to place.name, place_path(place) %>
+    <i><%= place.address %></i><br /><br />
+    <p><%= place.description %></p><br />
+     <% if place.comments.present? %>
     <div class="col-12">
-      <blockquote>
+       <blockquote>
         <% if place.comments.last.humanized_rating.present? %>
           <b><%= place.comments.last.humanized_rating %></b> -
         <% end %>
         <%= place.comments.last.message %><br />
-        <small><%= place.comments.last.user.email %></small>
       </blockquote>
     </div>
 <% end %>
+  </div>
+</div>
 </div>
 <% end %>
 </div>
+</div>
 
 
 
+
+
+<div class="container">
 <div class="digg_pagination">
   <%= will_paginate @places, :container => true %>
 </div>
-
+</div>

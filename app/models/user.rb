@@ -7,4 +7,6 @@ class User < ApplicationRecord
   has_many :places
   has_many :comments
   has_many :photos
+  has_many :followerships
+  has_many :followers, through: :followerships
 end

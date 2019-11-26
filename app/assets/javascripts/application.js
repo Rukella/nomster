@@ -14,6 +14,7 @@
 //= require activestorage
 //= require jquery
 //= require jquery_ujs
+//= require jquery.raty
 //= require turbolinks
 //= require popper
 //= require tether
